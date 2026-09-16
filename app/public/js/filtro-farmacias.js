@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const searchInput = document.getElementById('searchInput');
+    const searchInput = document.querySelector('.searchInput');
     const chips = document.querySelectorAll('.categorias-filtro .chip');
-    const cards = document.querySelectorAll('.lista-remedios .remedio-card');
+    const cards = document.querySelectorAll('.farmacias-grid .farmacia-card');
 
     let categoriaAtiva = 'Todos';
     let termoBusca = '';
 
     // Função para filtrar os remédios com base na busca e na categoria
-    function filtrarRemedios() {
+    function filtrarFarmacias() {
         cards.forEach(card => {
-            const nome = card.querySelector('h3').textContent.toLowerCase();
-            const descricao = card.querySelector('.remedio-info small').textContent.toLowerCase();
+            const nome = card.querySelector('h2').textContent.toLowerCase();
+            const descricao = card.querySelector('.farmacia-info p').textContent.toLowerCase();
             
             // Verifica se o texto digitado bate com o nome ou com a descrição
             const correspondeBusca = nome.includes(termoBusca) || descricao.includes(termoBusca);
@@ -36,19 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             termoBusca = e.target.value.trim().toLowerCase();
-            filtrarRemedios();
+            filtrarFarmacias();
         });
     }
-
-    // Evento de clique nos chips de categoria
-    chips.forEach(chip => {
-        chip.addEventListener('click', () => {
-            // Remove a classe 'ativo' de todos os chips e adiciona no clicado
-            chips.forEach(c => c.classList.remove('ativo'));
-            chip.classList.add('ativo');
-
-            categoriaAtiva = chip.textContent.trim();
-            filtrarRemedios();
-        });
-    });
 });

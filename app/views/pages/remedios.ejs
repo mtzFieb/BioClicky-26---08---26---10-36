@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Remédios - BioClicky</title>
     <link rel="stylesheet" href="/css/home.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="/app/public/js/filtros.js" defer></script>
+    <script src="/js/filtro-remedios.js" defer></script>
 </head>
 
 <body class="internal-body">
@@ -25,17 +27,17 @@
             <li><a href="/sobre">Sobre</a></li>
         </ul>
     </nav>
-<!-- Bonequinho / Perfil -->
-<section class="perfil-menu">
-    <button class="perfil-botao" type="button">
-        <ion-icon name="person-outline"></ion-icon>
-    </button>
-    <section class="perfil-dropdown">
-        <p class="perfil-nome">bioclicky</p>
-        <a href="/perfil">Meu Perfil</a>
-        <a href="/logout" class="sair">Sair</a>
+    <!-- Bonequinho / Perfil -->
+    <section class="perfil-menu">
+        <button class="perfil-botao" type="button">
+            <ion-icon name="person-outline"></ion-icon>
+        </button>
+        <section class="perfil-dropdown">
+            <p class="perfil-nome">bioclicky</p>
+            <a href="/perfil">Meu Perfil</a>
+            <a href="/logout" class="sair">Sair</a>
+        </section>
     </section>
-</section>
 </header>
 
 <section class="remedios-section">
@@ -45,7 +47,6 @@
     </header>
 
     <section class="categorias-filtro">
-
         <button class="seta-categoria">
             <ion-icon name="chevron-back-outline"></ion-icon>
         </button>
@@ -63,21 +64,14 @@
         <button class="seta-categoria">
             <ion-icon name="chevron-forward-outline"></ion-icon>
         </button>
-
     </section>
 
     <section class="barra-filtros">
 
-<label class="busca-remedio">
-    <ion-icon name="search-outline"></ion-icon>
-
-    <input
-        type="text"
-        id="searchInput"
-        placeholder="Buscar remédio..."
-        autocomplete="off"
-    >
-</label>
+        <label class="busca-remedio">
+            <ion-icon name="search-outline"></ion-icon>
+            <input type="text" id="searchInput" placeholder="Buscar remédio..." autocomplete="off">
+        </label>
 
         <select class="ordenar-select">
             <option>Menor preço</option>
@@ -89,15 +83,13 @@
             <ion-icon name="options-outline"></ion-icon>
             Filtros
         </button>
-
     </section>
 
     <section class="lista-remedios">
 
         <a href="/remedio/dipirona-500mg" class="remedio-card">
-
             <section class="remedio-icone">
-                <ion-icon name="medical-outline"></ion-icon>
+                <img src="/imagens/remedios/dipirona.webp" alt="Dipirona 500mg">
             </section>
 
             <section class="remedio-info">
@@ -113,13 +105,11 @@
             </section>
 
             <ion-icon name="chevron-forward-outline" class="seta-card"></ion-icon>
-
         </a>
 
         <a href="/remedio/dorflex" class="remedio-card">
-
             <section class="remedio-icone">
-                <ion-icon name="medical-outline"></ion-icon>
+                <img src="/imagens/remedios/dorflex.webp" alt="Dorflex">
             </section>
 
             <section class="remedio-info">
@@ -135,13 +125,11 @@
             </section>
 
             <ion-icon name="chevron-forward-outline" class="seta-card"></ion-icon>
-
         </a>
 
         <a href="/remedio/cetirizina-10mg" class="remedio-card">
-
             <section class="remedio-icone">
-                <ion-icon name="medical-outline"></ion-icon>
+                <img src="/imagens/remedios/cetirizina.webp" alt="Cetirizina 10mg">
             </section>
 
             <section class="remedio-info">
@@ -157,13 +145,11 @@
             </section>
 
             <ion-icon name="chevron-forward-outline" class="seta-card"></ion-icon>
-
         </a>
 
         <a href="/remedio/paracetamol-750mg" class="remedio-card">
-
             <section class="remedio-icone">
-                <ion-icon name="medical-outline"></ion-icon>
+                <img src="/imagens/main-1/...x" alt="Paracetamol 750mg">
             </section>
 
             <section class="remedio-info">
@@ -179,7 +165,6 @@
             </section>
 
             <ion-icon name="chevron-forward-outline" class="seta-card"></ion-icon>
-
         </a>
 
     </section>
@@ -197,7 +182,6 @@
         </section>
 
         <section>
-
             <h3>Navegação</h3>
             <a href="/">Início</a>
             <a href="/remedios">Remédios</a>
@@ -218,11 +202,11 @@
             <p>(11) 99999-9999</p>
         </section>
     </section>
+
     <section class="footer-bottom">
         © 2026 BioClicky. Todos os direitos reservados.
     </section>
 </footer>
 
-<script src="/public/js/"></script>
 </body>
 </html>

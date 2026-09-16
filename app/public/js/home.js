@@ -1,48 +1,10 @@
-const botao = document.getElementById("btnUsuario");
-const menu = document.getElementById("menuUsuario");
+const botaoMenu = document.querySelector('.menu-mobile');
+const menu = document.querySelector('.menu');
 
-if (botao) {
+botaoMenu.addEventListener('click', () => {
+    menu.classList.toggle('aberto');
 
-    botao.addEventListener("click", function (e) {
+    const aberto = menu.classList.contains('aberto');
 
-        e.stopPropagation();
-        menu.classList.toggle("active");
-
-    });
-
-    document.addEventListener("click", function () {
-
-        menu.classList.remove("active");
-
-    });
-
-}
-
-// ==================== PESQUISA NA PAGINA REMEDIOS ====================
-
-const pesquisa = document.getElementById("searchInput");
-const medicamentos = document.querySelectorAll(".medicamento");
-
-if (pesquisa) {
-
-    pesquisa.addEventListener("input", () => {
-
-        const texto = pesquisa.value
-            .toLowerCase()
-            .trim();
-
-        medicamentos.forEach(medicamento => {
-
-            const nome = medicamento.dataset.nome.toLowerCase();
-
-            if (nome.includes(texto)) {
-                medicamento.style.display = "flex";
-            } else {
-                medicamento.style.display = "none";
-            }
-
-        });
-
-    });
-
-}
+    botaoMenu.setAttribute('aria-expanded', aberto);
+});
